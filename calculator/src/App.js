@@ -3,15 +3,17 @@ import Boton from './componentes/Boton.jsx';
 import Pantalla from './componentes/Pantalla.jsx';
 import Pantalla2 from './componentes/Pantalla2.jsx';
 import BotonClear from './componentes/Boton-clear';
+import BotonBack from './componentes/Boton-back';
 import { useState } from 'react';
 import { evaluate } from 'mathjs';
 import React from 'react';
+import { useToast } from '@chakra-ui/react';
 
 function App() {
   const [inputPantalla, setInput] = useState('');
   const [inputPantalla2, setInput2] = useState('');
 
-  // const toast = useToast();
+  const toast = useToast();
 
   const agregarInput = (val) => {
     setInput(inputPantalla + val);
@@ -22,9 +24,21 @@ function App() {
     if (inputPantalla) {
       setInput(evaluate(inputPantalla));
     } else {
-      /* catch error: */
-      alert('No se puede calcular');
+      toast({
+        title: 'No results.',
+        description: 'Try inserting values and operator.',
+        status: 'error',
+        duration: 4000,
+        isClosable: true,
+        position: 'top-right',
+      });
     }
+  };
+
+  const backspace = () => {
+    console.log(inputPantalla);
+    setInput(inputPantalla.slice(0, -1));
+    setInput2(inputPantalla2.slice(0, -1));
   };
 
   return (
@@ -65,16 +79,13 @@ function App() {
           <Boton manejarClick={agregarInput}>)</Boton>
         </div>
         <div className="fila">
-          {/* button to go back: */}
-          <Boton
-            manejarClick={() => {
-              setInput(inputPantalla.slice(0, -1));
-              setInput2(inputPantalla2.slice(0, -1));
+          <BotonBack
+            manejarBack={() => {
+              backspace();
             }}
           >
-            {'HOLA'}
-          </Boton>
-
+            Back
+          </BotonBack>
           <BotonClear
             manejarClear={() => {
               setInput('');

@@ -6,9 +6,9 @@
   font-size: 50px;
   background-color: rgb(9, 3, 25);
   color: rgb(254, 254, 254);
-  margin: 0.7%;
+  border: 3px solid rgb(31, 31, 46);
   cursor: pointer;
-  padding: 4%;
+  padding: 2.5%;
 }
 
 @media (max-width: 425px) {
