@@ -1,0 +1,33 @@
+.App {
+  height: 100vh;
+  background-color: rgb(8, 5, 16);
+  font-family: 'roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor-calculadora {
+  width: 40rem;
+  padding: 1%;
+  background-color: rgb(31, 31, 46);
+}
+
+@media (max-width: 768px) {
+  .contenedor-calculadora {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .contenedor-calculadora {
+    width: 20rem;
+  }
+}
+
+.fila {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

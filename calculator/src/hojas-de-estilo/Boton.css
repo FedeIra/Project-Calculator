@@ -1,0 +1,30 @@
+.boton-contenedor {
+  display: flex;
+  flex: 1 1;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 50px;
+  background-color: rgb(9, 3, 25);
+  color: rgb(254, 254, 254);
+  margin: 0.7%;
+  cursor: pointer;
+  padding: 4%;
+}
+
+@media (max-width: 425px) {
+  .boton-contenedor {
+    font-size: 30px;
+  }
+}
+
+.operador {
+  color: rgb(111, 53, 46);
+}
+
+.operador:hover {
+  border: 1px solid white;
+}
+
+.boton-contenedor:hover {
+  border: 1px solid white;
+}

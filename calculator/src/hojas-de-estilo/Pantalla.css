@@ -1,0 +1,18 @@
+.input {
+  margin-bottom: 0.8%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  font-size: 40px;
+  background-color: rgb(9, 3, 25);
+  color: rgb(254, 254, 254);
+  font-family: 'roboto';
+  padding: 5%;
+}
+
+@media (max-width: 768px) {
+  .input {
+    padding: 10%;
+  }
+}
