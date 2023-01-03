@@ -5,7 +5,9 @@
   font-size: 20px;
   background-color: rgb(9, 3, 25);
   color: rgb(254, 254, 254);
-  padding: 5%;
+  padding: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 @media (max-width: 768px) {

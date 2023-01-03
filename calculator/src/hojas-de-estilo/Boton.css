@@ -8,12 +8,13 @@
   color: rgb(254, 254, 254);
   border: 3px solid rgb(31, 31, 46);
   cursor: pointer;
-  padding: 2.5%;
+  padding: 2%;
 }
 
 @media (max-width: 425px) {
   .boton-contenedor {
     font-size: 30px;
+    padding: 3%;
   }
 }
 
