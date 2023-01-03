@@ -8,6 +8,8 @@ import { useState } from 'react';
 import { evaluate } from 'mathjs';
 import React from 'react';
 import { useToast } from '@chakra-ui/react';
+import Footer from './componentes/Footer.jsx';
+import { motion } from 'framer-motion';
 
 function App() {
   const [inputPantalla, setInput] = useState('');
@@ -43,6 +45,14 @@ function App() {
 
   return (
     <div className="App">
+      <motion.h2
+        className="title"
+        initial={{ x: -1000 }}
+        animate={{ x: 0 }}
+        transition={{ delay: 0.6, type: 'spring' }}
+      >
+        Online Calculator
+      </motion.h2>
       <div className="contenedor-calculadora">
         <Pantalla2 input={inputPantalla2} />
         <div>
@@ -96,6 +106,7 @@ function App() {
           </BotonClear>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
